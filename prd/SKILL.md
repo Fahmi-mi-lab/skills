@@ -28,6 +28,16 @@ Use this markdown structure for the PRD:
 
 ---
 
+## 0. Project Type
+Classify this project so downstream tools can adapt accordingly.
+
+- **Type**: [REST API | Frontend App | Fullstack | CLI Tool | Library | Serverless | Mobile]
+- **Architecture**: [Monolith | Microservices | Serverless | JAMstack]
+- **Has Controller Layer**: [Yes | No]
+- **Has Auth**: [Yes | No]
+
+---
+
 ## 1. Overview
 Brief 2–3 sentence summary of what this project is, who it's for, and what problem it solves.
 
