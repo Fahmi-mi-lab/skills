@@ -1,6 +1,6 @@
-# zed-skills
+# skills
 
-Kumpulan skill untuk [Zed Editor](https://zed.dev) — siap pakai untuk workflow coding sehari-hari.
+Kumpulan skill.
 
 ## Skills
 
