@@ -30,6 +30,7 @@ Stages 1 and 3 are mostly textual (statements/tables) rather than complex visual
 
 ## How to execute in Penpot (MCP)
 - **Reuse first, draw manually only as a last resort.** Check whether a matching component (data source icon, pipeline stage box, model box, serving endpoint icon, etc.) already exists in the project's shared library. If it does, instantiate that component via MCP — don't draw a new shape from scratch.
+- **Some components are variant families, not standalone components** (e.g. `stage-box` with a `stage: data/training/serving` property). When instantiating one, always set the correct variant property (don't leave it on the default) — see `penpot-library-ref.md` for which components have variants and what their properties mean.
 - **Colors and text from tokens, never hardcoded.** Pull from the project's color styles / text styles (e.g. `stage-data`, `stage-training`, `stage-serving`, `label-text`). If a token for a given category doesn't exist yet, create it once and save it to the library — so later stages/diagrams (even in a different session or agent) can reuse it.
 - **One frame per stage.** Consistent naming: `[Number]-[Stage-Name]`, e.g. `02-Data-Feature-Pipeline`, `05-Serving-Inference`.
 - **Consistent layout:** pick a default flow direction (left→right or top→bottom, following the natural flow from raw data to a served prediction) at the start of the project and keep it across every frame.
