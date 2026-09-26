@@ -29,6 +29,7 @@ Stage 1 includes a textual source inventory (table) in addition to its diagram �
 
 ## How to execute in Penpot (MCP)
 - **Reuse first, draw manually only as a last resort.** Check whether a matching component (source icon, storage layer box, orchestrator node, database/warehouse icon, etc.) already exists in the project's shared library. If it does, instantiate that component via MCP — don't draw a new shape from scratch.
+- **Some components are variant families, not standalone components** (e.g. `source-icon` with a `type: db/api/file/stream` property, or `layer-band` with a `layer: bronze/silver/gold` property). When instantiating one, always set the correct variant property (don't leave it on the default) — see `penpot-library-ref.md` for which components have variants and what their properties mean.
 - **Colors and text from tokens, never hardcoded.** Pull from the project's color styles / text styles (e.g. `source-external`, `layer-bronze`, `layer-silver`, `layer-gold`, `label-text`). If a token for a given category doesn't exist yet, create it once and save it to the library — so later stages/diagrams (even in a different session or agent) can reuse it.
 - **One frame per stage.** Consistent naming: `[Number]-[Stage-Name]`, e.g. `01-Source-Ingestion`, `03-Pipeline-Orchestration`.
 - **Consistent layout:** pick a default flow direction (left→right or top→bottom, following the natural data flow from source to consumption) at the start of the project and keep it across every frame.
